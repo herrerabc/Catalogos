@@ -1,0 +1,11 @@
+Catalogos/bin
+DatabaseCatalogos/bin
+Datos/bin
+Entidades/bin
+Logica/bin
+Catalogos/obj
+DatabaseCatalogos/obj
+Datos/obj
+Entidades/obj
+Logica/obj
+packages

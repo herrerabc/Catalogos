@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+            <h1 style="font-style: italic">Acceso</h1>        
+            <div class="input-group m-b-20">
+                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                <div class="fg-line">
+                    @Html.TextBox("Usuario",null, new { @class = "form-control", placeholder = "Usuario" })
+                </div>
+            </div>
+            <div class="input-group m-b-20">
+                <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                <div class="fg-line">
+
+                    @Html.Password("Password", null,
+                            new
+                            {
+                                @class = "form-control",
+                                placeholder = "Contraseña"
+                            })
+                </div>
+            </div>
+            <button class="btn btn-default" name="BtnSubmit"><i class="zmdi zmdi-mail-send"></i>Ingresar</button>
+            @Html.ValidationSummary()
+        }
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>
